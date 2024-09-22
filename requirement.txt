@@ -1,0 +1,6 @@
+frontVueJs
+jwt
+diesel
+config
+axum
+tokio
