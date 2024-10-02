@@ -7,6 +7,8 @@ mod interfaces;
 mod application;
 mod domain;
 
+#[deny(dead_code)]
+#[forbid(unsafe_code)]
 #[tokio::main]
 async fn main() {
     dotenv().ok();
