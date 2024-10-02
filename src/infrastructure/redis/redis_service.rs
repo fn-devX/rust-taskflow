@@ -1,3 +1,5 @@
+use bb8_redis::redis;
+
 use bb8_redis::{bb8::Pool, RedisConnectionManager};
 use redis::AsyncCommands;
 

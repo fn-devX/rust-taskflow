@@ -1,6 +1,9 @@
 frontVueJs
 jwt
-diesel
+postgres(from diesel)
+redis
+hashing
+ws
 config
 axum
 tokio

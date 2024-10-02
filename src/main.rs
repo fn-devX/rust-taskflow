@@ -12,14 +12,9 @@ async fn main() {
     dotenv().ok();
 
     let app = Router::new()
-        .merge(interfaces::api::user_routes())
-        .route("/health", get(interfaces::http::handlers::health_check));  // Проверка статуса API
+        .merge(interfaces::api::routes::user_routes::user_routes())
+        .route("/health", get(interfaces::http::handlers::health_check));
 
-    let addr = SocketAddr::from(([127, 0, 0, 1], 3000));
-    println!("Server is running on {}", addr);
-
-    axum::Server::bind(&addr)
-        .serve(app.into_make_service())
-        .await
-        .unwrap();
+    let listener = tokio::net::TcpListener::bind("0.0.0.0:3000").await.unwrap();
+    axum::serve(listener, app).await.unwrap();
 }
