@@ -6,8 +6,6 @@
 /udcp/catch.rs
 /config/database.yml
 
-/src/
-
 touch.http
 
 Cargo.lock
