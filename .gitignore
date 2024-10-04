@@ -1,6 +1,7 @@
 /target
 /.idea
 /src
+/nolocal
 
 
 .env
