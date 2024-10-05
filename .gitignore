@@ -4,16 +4,19 @@
 /src/application
 /src/infrastructure
 /src/interfaces
+/src/domain/entities/mod.rs
 
 /nolocal
 
 
 .env
 /src/lib.rs
+requirement.txt
 
 /udcp/catch.rs
 /config/database.yml
 
 touch.http
+
 
 Cargo.lock
