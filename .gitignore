@@ -10,13 +10,9 @@
 
 
 .env
-/src/lib.rs
-requirement.txt
 
 /udcp/catch.rs
 /config/database.yml
 
 touch.http
 
-
-Cargo.lock
