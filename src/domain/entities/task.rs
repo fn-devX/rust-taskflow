@@ -1,3 +1,4 @@
+use std::cmp::PartialEq;
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 
@@ -53,14 +54,20 @@ pub struct Task {
     pub completed_at: Option<i64>,
     pub archived_at: Option<i64>,
     pub deleted_at: Option<i64>,
-    pub recurrence: Option<Recurrence>,  // Recurring task support
-    pub recurrence_end: Option<i64>,     // End date for recurrence
-    pub dependencies: Vec<i32>,          // Task dependencies
-    pub collaborators: Vec<Collaborator>,// List of collaborators
-    pub progress: Option<u8>,            // Task progress (0-100)
-    pub comments: Vec<Comment>,          // List of comments
-    pub activity_log: Vec<String>,       // Activity log for task changes
-    pub custom_fields: HashMap<String, String>, // Custom key-value fields
+    pub recurrence: Option<Recurrence>,
+    pub recurrence_end: Option<i64>,
+    pub dependencies: Vec<i32>,
+    pub collaborators: Vec<Collaborator>,
+    pub progress: Option<u8>,
+    pub comments: Vec<Comment>,
+    pub activity_log: Vec<String>,
+    pub custom_fields: HashMap<String, String>,
+}
+
+impl PartialEq for TaskStatus {
+    fn eq(&self, other: &Self) -> bool {
+        todo!()
+    }
 }
 
 impl Task {
