@@ -1152,6 +1152,7 @@ dependencies = [
  "axum",
  "bb8-redis",
  "chrono",
+ "deadpool",
  "deadpool-postgres",
  "dotenv",
  "json-web-token",
@@ -1160,6 +1161,7 @@ dependencies = [
  "thiserror",
  "tokio",
  "tokio-postgres",
+ "url",
 ]
 
 [[package]]
