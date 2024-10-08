@@ -7,7 +7,7 @@ use crate::domain::errors::AppError;
 pub struct TaskService;
 
 impl TaskService {
-    pub fn create_task(title: String, description: Option<String>) -> Result<Task, AppError> {
+    pub fn create_task(title: String, description: Option<String>, description0: Option<String>) -> Result<Task, AppError> {
         if title.is_empty() {
             return Err(AppError::ValidationError { field: "".to_string(), message: "Title cannot be empty".to_string() });
         }
@@ -70,11 +70,11 @@ impl TaskService {
 pub struct UserService;
 
 impl UserService {
-    pub fn create_user(id: i32, username: String, password_hash: String, role: Role) -> Result<User, AppError> {
+    pub fn create_user(username: String, password_hash: String, role: Role) -> Result<User, AppError> {
         if username.is_empty() || password_hash.is_empty() {
             return Err(AppError::ValidationError { field: "".to_string(), message: "Username and password cannot be empty".to_string() });
         }
-        Ok(User::new(id, username, password_hash, role))
+        Ok(User::new(0, username, password_hash, role))
     }
 
     pub fn update_user_details(user: &mut User, name: Option<String>, surname: Option<String>, email: Option<String>) -> Result<(), AppError> {
