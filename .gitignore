@@ -1,7 +1,6 @@
 /target
 /.idea
 
-/src/infrastructure/redis
 /src/interfaces
 /src/domain/entities/mod.rs
 
