@@ -1,4 +1,3 @@
-frontVueJs
 jwt
 postgres(from diesel)
 redis
@@ -8,3 +7,5 @@ config
 axum
 tokio
 tracers
+
+// крч, основная часть сделана, теперь тебе остается лишь добавить роуты, и немного поработай над самой их логикой. удачи
