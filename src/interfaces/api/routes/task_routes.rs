@@ -1,7 +1,6 @@
 use axum::{routing::{post, put}, Router, Json, http::StatusCode};
-use crate::{application::services::TaskService, domain::entities::task::{Task, TaskStatus, Recurrence}};
-use crate::domain::errors::AppError;
-use serde::{Deserialize, Serialize};
+use crate::{application::services::TaskService, domain::entities::task::{Task}};
+use serde::{Deserialize};
 
 pub fn task_routes() -> Router {
     Router::new()

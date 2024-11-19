@@ -1,7 +1,6 @@
 use axum::{routing::{post, put}, Router, Json, http::StatusCode};
 use crate::{application::services::UserService, domain::entities::user::{User, Role}};
-use crate::domain::errors::AppError;
-use serde::{Deserialize, Serialize};
+use serde::{Deserialize};
 
 pub fn user_routes() -> Router {
     Router::new()

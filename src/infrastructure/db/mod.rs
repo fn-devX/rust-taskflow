@@ -1,3 +1,5 @@
+pub mod user_repo;
+
 use deadpool_postgres::{Config, ManagerConfig, Pool, RecyclingMethod, Runtime};
 use std::env;
 use tokio_postgres::NoTls;
