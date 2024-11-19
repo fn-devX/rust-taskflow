@@ -1,7 +1,6 @@
 /target
 /.idea
 
-/src/interfaces
 /src/domain/entities/mod.rs
 
 /nolocal
