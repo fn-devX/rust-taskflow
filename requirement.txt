@@ -1,4 +1,3 @@
-frontVueJs
 jwt
 postgres(from diesel)
 redis
