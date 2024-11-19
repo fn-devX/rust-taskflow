@@ -1,9 +1,0 @@
-jwt
-postgres(from diesel)
-redis
-hashing
-ws
-config
-axum
-tokio
-tracers
